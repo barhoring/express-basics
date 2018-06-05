@@ -11,7 +11,11 @@ app.set('view engine', 'pug');
 const mainRoutes = require('./routes');
 const cardRoutes = require('./routes/cards');
 
+app.use('/static', express.static('public'));
+//app.set('views', path.join(__dirname, 'views'));
+
 app.use(mainRoutes);
+
 app.use('/cards', cardRoutes);
 
 app.use(function(req, res, next){

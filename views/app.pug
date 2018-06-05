@@ -1,0 +1,13 @@
+extends layout.pug
+
+block content
+  if name
+    section.namecard
+      .namecard-hello
+        p.namecard-greeting Hello, #{name}!
+        form.namecard-exit(action='/goodbye', method='POST')
+          button(type='submit')
+            img(src='/static/img/close.svg')
+    
+      block main0
+    block main

@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', function (req, res) {
-    console.log('home page');
     const name = req.cookies.username;
     if(!name)
         res.redirect('/hello');

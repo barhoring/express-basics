@@ -1,0 +1,32 @@
+extends app.pug
+block main
+  section.flashcards
+    .card.card-question
+      .card-header
+      h1.card-title Question
+      #content
+        h2= text
+        p#hint
+          i Hint: #{hint}
+      .card-flip-wrap
+        a(href=`/cards/${id}/card-back`)
+          img.card-flip(src='/static/img/flip.svg')
+      .card-next
+        a(href='/cards')
+          img(src='/static/img/next.svg')
+
+
+//-   section.flashcards
+//-     .card.card-question
+//-       .card-header
+//-       h1.card-title Question
+//-       #content
+//-         h2 Which HTML element can contain JavaScript?
+//-         p#hint
+//-           i Hint: It starts with an "s"
+//-       .card-flip-wrap
+//-         a(href='card-back.html')
+//-           img.card-flip(src='img/flip.svg')
+//-       .card-next
+//-         a(href='error.html')
+//-           img(src='img/next.svg')
