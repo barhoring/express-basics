@@ -1,0 +1,12 @@
+
+extends layout.pug
+
+block content    
+  section.namecard
+    .namecard-hello
+     p.namecard-greeting Welcome, John!
+    form.namecard-exit(action='/goodbye', method='POST')
+      button(type='submit')
+      img(src='img/close.svg')
+    h1.namecard-prompt Let's get started
+    a.namecard-submit(href='card-front') Begin!

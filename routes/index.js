@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
 router.get('/hello', function (req, res) {
     const name = req.cookies.username;
     if(name)
-        res.redirect('/');
+        return res.redirect('/');
     res.render('hello');
 });
 
