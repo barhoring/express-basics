@@ -1,2 +1,3 @@
-﻿# express-basics
- in progress
+# express flashcards game
+run
+`node app.js`
